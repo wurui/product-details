@@ -17,39 +17,53 @@
     <data>
         <ecom-products>
             <i>
-                <title>纯色毛绒哈居拖鞋</title>
-                <brief>居家伴侣</brief>
-                <price>19.9</price>
-                <orig_price>29.9</orig_price>
+                <title>智利红车厘子JJ级(单果约28mm+) 500g</title>
+                <brief>产地直采，空运直达，鲜甜多汁，营养美味</brief>
+                <price>89</price>
+                <orig_price>119</orig_price>
                 <inventory>10</inventory>
                 <category></category>
                 <sold>0</sold>
                 <owner>git/wurui</owner>
-                <description></description>
+                <parameter>
+                    <i>
+                        <name>产地</name>
+                        <value>智利</value>
+                    </i>
+                    <i>
+                        <name>净含量</name>
+                        <value>500g</value>
+                    </i>
+                    <i>
+                        <name>储存条件</name>
+                        <value>冷藏</value>
+                    </i>
+                </parameter>
+                <description><![CDATA[
+                    <p> <img src="http://i.oxm1.cc/uploads/git/wurui/img/29uekrxqwTjoxs9nywRqqqqA24or-2021.jpg">
+                    </p>
+                    <p> <img src="http://i.oxm1.cc/uploads/git/wurui/img/29uekrx1dTjoxs9oofRkm9iA3f9e-2476.jpg"></p>
+                    <p> <img src="http://i.oxm1.cc/uploads/git/wurui/img/29uekrw2yTjoxs9pmuRinp6A43pg-2501.jpg"></p>
+                    <p>   <img src="http://i.oxm1.cc/uploads/git/wurui/img/29uekruy1Tjoxs9qrrRqk7vA23c0-2449.jpg"></p>
+                    <p>   &nbsp;</p><p>   &nbsp;</p><p>   &nbsp;</p>
+                    ]]>
+                </description>
                 <media>
                     <i>
-                        <src>http://i.oxm1.cc/uploads/git/wurui/img/29uhgj9mzTjouwic2tRwkj2Agdb-1000.png</src>
+                        <src>http://i.oxm1.cc/uploads/git/wurui/img/29uejvbjuTjoxt6a5yRu6jeA19i5-750.jpg</src>
+                        <type>image</type>
+                    </i>
+                    <i>
+                        <src>http://i.oxm1.cc/uploads/git/wurui/img/29uejvas8Tjoxt6axkReekdA1d22-750.jpg</src>
+                        <type>image</type>
+                    </i>
+                    <i>
+                        <src>http://i.oxm1.cc/uploads/git/wurui/img/29uejva4oTjoxt6bl4Rq6niA1on3-750.jpg</src>
                         <type>image</type>
                     </i>
                 </media>
             </i>
-            <i>
-                <title>Amozon Kindle7 Paperwhite</title>
-                <brief>最新款　性能强大　阅读伴侣</brief>
-                <price>699</price>
-                <orig_price>899</orig_price>
-                <inventory>10</inventory>
-                <category></category>
-                <sold>0</sold>
-                <owner>git/wurui</owner>
-                <description></description>
-                <media>
-                    <i>
-                        <src>http://i.oxm1.cc/uploads/git/wurui/img/29uhgj88vTjouwidgxRg5ftA80l-1000.png</src>
-                        <type>image</type>
-                    </i>
-                </media>
-            </i>
+           
         </ecom-products>
     </data>
 </root>

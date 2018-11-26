@@ -2,9 +2,63 @@
     <xsl:template match="/root" name="wurui.product-details">
         <!-- className 'J_OXMod' required  -->
         <div class="J_OXMod oxmod-product-details" ox-mod="product-details">
-            <h1>
-                This is mod product-details;
-            </h1>
+            <xsl:variable name="product" select="data/ecom-products/i[1]"/>
+            <xsl:variable name="product_imgs" select="$product/media/i[type = 'image']"/>
+            
+
+            <section class="img-slider">
+
+                <div class="J_slider" data-on="1" data-count="{count($product_imgs)}">
+                    <div class="flip-window transition">
+                        <div class="flip-pages" style="width:{count($product_imgs)}00%;">
+                            <xsl:for-each select="$product_imgs">
+
+                                <img class="flip-page" style="background-image:url({src});"
+                                                 src="http://a.oxm1.cc/img/blank.png" />
+
+                            </xsl:for-each>
+                        </div>
+
+                    </div>
+
+                    <div class="index-dots">
+                        <xsl:for-each select="$product_imgs">
+                            <i class="dot"></i>
+                        </xsl:for-each>
+                    </div>
+                </div>
+            </section>
+            <section class="info">
+                <h3 class="title">
+                    <xsl:value-of select="$product/title"/>
+                </h3>
+                <p class="brief">
+                    <xsl:value-of select="$product/brief"/>
+                </p>
+                <p class="buyinfo">
+                    <span class="price">
+                    	<em><xsl:value-of select="$product/price"/></em>
+                        <del><xsl:value-of select="$product/orig_price"/></del>
+                    </span>
+                    &#160;&#160;
+                    <xsl:for-each select="$product/tags/i">
+                        <em class="tag {.}"><xsl:value-of select="."/></em>
+                    </xsl:for-each>
+                </p>
+            </section>
+            <xsl:if test="count($product/parameter/i) &gt; 0">
+                <section class="params">
+                    <xsl:for-each select="$product/parameter/i">
+                        <p>
+                            <xsl:value-of select="name"/>&#160;&#160;
+                            <xsl:value-of select="value"/>
+                        </p>
+                    </xsl:for-each>
+                </section>
+            </xsl:if>
+            <section class="desc-text">
+                <xsl:value-of disable-output-escaping="yes" select="$product/description"/>
+            </section>
         </div>
     </xsl:template>
 </xsl:stylesheet>

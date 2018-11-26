@@ -2,9 +2,10 @@
   "RULE_VERSION":"20180724",
   "name": "product-details",
   "apiDependencies": [
-  {
-    "name": "ecom-products"
-  }
-]
+	  {
+	    "name": "ecom-products",
+	    "selector":"_id"
+	  }
+	]
 }
 
