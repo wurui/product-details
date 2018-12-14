@@ -39,10 +39,12 @@
                 </p>
                 
                 <p class="buyinfo">
-                    <xsl:if test="$product/price and $product/price != '' ">
+                    <xsl:if test="$product/price and $product/price != ''  and $product/price != 0 ">
                         <span class="price">
                         	<em><xsl:value-of select="$product/price"/></em>
-                            <del><xsl:value-of select="$product/orig_price"/></del>
+                            <xsl:if test="$product/orig_price and $product/orig_price != ''  and $product/orig_price != 0 ">
+                                <del><xsl:value-of select="$product/orig_price"/></del>
+                            </xsl:if>
                         </span>
                         &#160;&#160;
                     </xsl:if>
