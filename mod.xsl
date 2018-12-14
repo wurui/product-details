@@ -20,12 +20,14 @@
                         </div>
 
                     </div>
+                    <xsl:if test="count($product_imgs) &gt; 1">
 
-                    <div class="index-dots">
-                        <xsl:for-each select="$product_imgs">
-                            <i class="dot"></i>
-                        </xsl:for-each>
-                    </div>
+                        <div class="index-dots">
+                            <xsl:for-each select="$product_imgs">
+                                <i class="dot skin-bgcolor"></i>
+                            </xsl:for-each>
+                        </div>
+                    </xsl:if>
                 </div>
             </section>
             <section class="info">
@@ -35,16 +37,20 @@
                 <p class="brief">
                     <xsl:value-of select="$product/brief"/>
                 </p>
+                
                 <p class="buyinfo">
-                    <span class="price">
-                    	<em><xsl:value-of select="$product/price"/></em>
-                        <del><xsl:value-of select="$product/orig_price"/></del>
-                    </span>
-                    &#160;&#160;
+                    <xsl:if test="$product/price and $product/price != '' ">
+                        <span class="price">
+                        	<em><xsl:value-of select="$product/price"/></em>
+                            <del><xsl:value-of select="$product/orig_price"/></del>
+                        </span>
+                        &#160;&#160;
+                    </xsl:if>
                     <xsl:for-each select="$product/tags/i">
                         <em class="tag {.}"><xsl:value-of select="."/></em>
                     </xsl:for-each>
                 </p>
+
             </section>
             <xsl:if test="count($product/parameter/i) &gt; 0">
                 <section class="params">
